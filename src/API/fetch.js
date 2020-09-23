@@ -22,13 +22,24 @@ export async function handleSearch(value) {
 
 export async function getCurrentConditions(id) {
     const url = "http://dataservice.accuweather.com/currentconditions/v1/"
-    debugger
     try {
         const response = await axios.get(`${corsUrl}${url}${id}?apikey=${API_KEY}`);
         return response.data;
     } catch (err) {
         // console.log("error", err)
-        message.error('Unable to get curretn weather conditions.')
+        message.error('Unable to get current weather conditions.')
 
     };
 };
+
+export async function get5DayForecast(id) {
+    const url = "http://dataservice.accuweather.com/forecasts/v1/daily/5day/"
+    try {
+        const response = await axios.get(`${corsUrl}${url}${id}?apikey=${API_KEY}&metric=true`);
+        return response.data;
+    } catch (err) {
+        // console.log("error", err)
+        message.error('Unable to get current weather conditions.')
+
+    };
+}
