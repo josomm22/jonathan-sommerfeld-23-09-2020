@@ -36,16 +36,19 @@ height: 100vh;
       .weather{
         &-container{
           flex-grow: 1;
+          display: flex;
+          flex-direction: column;
           width: 80%;
           height: 80%;
           border: 1px solid black;
+          padding: 0 5%;
 
         }
         &-top{
           display: flex;
           justify-content: space-between;
           align-items: center;
-          padding: 5%;
+          height: 20%;
           &-left{
 
           }
@@ -64,13 +67,59 @@ height: 100vh;
           }
 
         }
-        &middle{
+        &-middle{
+          display: flex;
+          height: 40%;
+          justify-content: center;
+          .marquee{
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            position: relative;
 
+            &-icon{
+              // font-size: 30px;
+              width: 20vw;
+            }
+            &-loader{
+              font-size: 50px;
+            }
+            &-text{
+              width: 100%;
+              text-align: center;
+              font-size: 2rem;
+              position: absolute;
+              bottom: 15%;
+              line-height: 1;
+            }
+          }
         }
-        &bottom{
-
+        &-bottom{
+          height: 40%;
+          .spreadout{
+            display: flex;
+            justify-content: space-evenly;
+            height: 100%;
+          }
         }
       }
+    }
+  }
+  .card{
+    &-container{
+      border: 1px solid grey;
+      border-radius: 5px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: center;
+      width: 10vw;
+      height: 60%;
+      -webkit-box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
+      -moz-box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
+      box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
+      
     }
   }
 }

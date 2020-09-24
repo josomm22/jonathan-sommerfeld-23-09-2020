@@ -163,5 +163,5 @@ const Icons = [
 
 export default function iconFinder(id) {
     const iconName = Icons.find(icon => icon.id === id).name;
-    return iconName
+    return require(`../assets/SVG/${iconName}.svg`)
 };
