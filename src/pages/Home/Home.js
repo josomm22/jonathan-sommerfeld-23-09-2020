@@ -22,15 +22,10 @@ export default function Home(props) {
 
     },[])
 
-    const handleLocationSelect = (ID, name) => {
-        setSelectedLocationID(ID);
-        setSelectedLocationName(name);
-    }
-
     return (
         <div className="home-container">
-            <Search handleLocationSelect={handleLocationSelect} />
-            <Weather locationID={selectedLocationID} locationName={selectedLocationName} />
+            <Search />
+            <Weather />
         </div>
     )
 };

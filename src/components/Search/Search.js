@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Input, AutoComplete, message } from 'antd'
 import { handleSearch } from '../../API/fetch'
 
-export default function Search({ handleLocationSelect }) {
+export default function Search({ updateCurrentLocation }) {
     const [selectedLocationName, setSelectedLocationName] = useState("")
     // const [selectedLocationID, setSelectedLocationID] = useState("")
     const [searchResults, setSearchResults] = useState([])
@@ -28,7 +28,8 @@ export default function Search({ handleLocationSelect }) {
         console.log("value", value);
         const locationID = searchResults.find(obj => obj.LocalizedName).Key;
         setSelectedLocationName(value);
-        handleLocationSelect(locationID, value);
+        const locationObj = {id: locationID, name: value};
+        updateCurrentLocation(locationObj);
 
     };
 
