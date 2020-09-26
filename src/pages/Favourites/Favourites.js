@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import {useHistory} from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
+import { message } from 'antd';
 import SpreadOut from '../../components/Spreadout';
 import { getCurrentConditions } from '../../API/fetch'
 
@@ -10,21 +11,29 @@ export default function Favourites({ favourites, updateCurrentLocation, theme })
     const history = useHistory();
 
     const newCreateWeatherArray = favouritesArray => {
-        Promise.all(favouritesArray.map(async locationObj => {
-            const currentWeather = await getCurrentConditions(locationObj.id)
-            const weatherObj = {
-                id: locationObj.id,
-                header: locationObj.name,
-                temperature: currentWeather[0].Temperature.Metric.Value,
-                icon: currentWeather[0].WeatherIcon,
-                text: currentWeather[0].WeatherText,
-                
-            }
-            return weatherObj
-        })).then(result => {
-            console.log("test result", result)
-            setWeatherArray(result)
-        })
+        try {
+            Promise.all(favouritesArray.map(async locationObj => {
+                const currentWeather = await getCurrentConditions(locationObj.id)
+                const weatherObj = {
+                    id: locationObj.id,
+                    header: locationObj.name,
+                }
+                if (currentWeather) {
+                    weatherObj = {...weatherObj,
+                        temperature: currentWeather[0].Temperature.Metric.Value,
+                        icon: currentWeather[0].WeatherIcon,
+                        text: currentWeather[0].WeatherText,
+                    }
+                }
+                return weatherObj
+            })).then(result => {
+                console.log("test result", result)
+                setWeatherArray(result)
+            })
+        } catch (err) {
+            message.error('problem receiving favorites, refresh page to try again')
+        }
+
     };
 
     const onCardClick = useCallback(locationObj => {
@@ -32,7 +41,7 @@ export default function Favourites({ favourites, updateCurrentLocation, theme })
         updateCurrentLocation(locationObj)
         history.push('/home')
 
-    },[history]);
+    }, [history]);
 
     useEffect(() => {
         if (favourites.length > 0) {
@@ -48,7 +57,7 @@ export default function Favourites({ favourites, updateCurrentLocation, theme })
                     isLoading={weatherArray.length === 0}
                     isClickable={true}
                     onCardClick={onCardClick}
-                    cardAmount={favourites? favourites.length : 1}
+                    cardAmount={favourites ? favourites.length : 1}
                 />
             </div>
         </div>

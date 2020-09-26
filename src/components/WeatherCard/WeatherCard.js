@@ -13,9 +13,10 @@ export default function WeatherCard({ header, temperature, icon, text, isLoading
                     <div>{header}</div>
                     <div>{temperature} C°</div>
                     <div>
-                        {icon &&
+                        {/* {icon &&
                             <img src={iconFinder(icon)} />
-                        }
+                        } */}
+                        {icon ? <img src={iconFinder(icon)} /> : <LoadingOutlined />}
                     </div>
                 </>
                 :
