@@ -3,7 +3,7 @@ import SpreadOut from '../../components/Spreadout';
 import { getCurrentConditions } from '../../API/fetch'
 
 
-export default function Favourites({ favourites }) {
+export default function Favourites({ favourites, updateCurrentLocation }) {
     const [weatherArray, setWeatherArray] = useState([]);
 
     const newCreateWeatherArray = favouritesArray => {
@@ -32,10 +32,10 @@ export default function Favourites({ favourites }) {
     return (
         <div className="favourites-body">
             <div className="favourites-container">
-                <SpreadOut 
-                cardData={weatherArray.length > 0 && weatherArray} 
-                isLoading={weatherArray.length === 0} 
-                isClickable={true}
+                <SpreadOut
+                    cardData={weatherArray.length > 0 && weatherArray}
+                    isLoading={weatherArray.length === 0}
+                    isClickable={true}
                 />
             </div>
         </div>

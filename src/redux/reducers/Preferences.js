@@ -1,26 +1,16 @@
-const ADD_FAVOURITE = 'ADD_FAVOURITE';
-const REMOVE_FAVOURITE = 'REMOVE_FAVOURITE';
 const UPDATE_CURRENT = 'UPDATE_CURRENT';
-
-export const addFavourite = newFavourite => ({
-    type: ADD_FAVOURITE,
-    payload: {
-        newFavourite
-    }
-});
-export const removeFavourite = deletedFavouriteID => ({
-    type: REMOVE_FAVOURITE,
-    payload: {
-        deletedFavouriteID
-    }
-});
+const TOGGLE_THEME = 'TOGGLE_THEME';
 
 export const updateCurrentLocation = locationObj => ({
     type: UPDATE_CURRENT,
     payload: {
         locationObj
     }
-})
+});
+
+export const toggleTheme = () => ({
+    type: TOGGLE_THEME,
+});
 
 
 const initialState = {
@@ -36,6 +26,16 @@ export default function (state = initialState, action) {
             return {
                 ...state,
                 currentLocation: locationObj,
+            }
+        }
+        case TOGGLE_THEME: {
+            const { theme } = state;
+            const newTheme = theme === 'light' ? 'dark' : 'light';
+            console.log("newTheme", newTheme);
+
+            return {
+                ...state,
+                theme: newTheme
             }
         }
         default:

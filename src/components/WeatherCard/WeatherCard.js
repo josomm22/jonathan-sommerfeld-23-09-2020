@@ -2,12 +2,12 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { LoadingOutlined } from '@ant-design/icons';
 import iconFinder from '../../Helpers/iconFinder';
 
-export default function WeatherCard({ header, temperature, icon, text, isLoading, id, isClickable, updateCurrentLocation }) {
+export default function WeatherCard({ header, temperature, icon, text, isLoading, id, isClickable }) {
     // const [isLoading, setIsLoading] = useState(true)
 
 
     return (
-        <div className={`card-container ${isClickable? 'clickable': ''}`}  value={id && id} onClick={(value, header)=> updateCurrentLocation({id:value, name:header })}>
+        <div className={`card-container ${isClickable? 'clickable': ''}`}  value={id && id} >
             {!isLoading ?
                 <>
                     <div>{header}</div>

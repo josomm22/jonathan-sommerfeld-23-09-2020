@@ -1,12 +1,47 @@
 @import '~antd/dist/antd.css';
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 
 $bp-tablet: 768px;
 $bp-phone: 600px;
+
+@mixin gradient-light {
+  background: #2980B9;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #FFFFFF, #6DD5FA, #2980B9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  .ant-btn{
+    background: #71d6fa !important;
+  }
+}
+
+@mixin gradient-dark {
+  background: #0F2027;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+@mixin background-light {
+  background: #71d6fa;
+  
+}
+@mixin background-dark {
+  background: #2C5364;
+  
+}
+@mixin button-dark {  
+  .ant-btn{
+    background: darkslateblue !important;
+    color: #FFFFFF;
+  }
+}
+@mixin font-dark {
+  color: #FFFFFF;
+}
 
 .App {
 display: flex;
 flex-direction: column;
 height: 100vh;
+font-family: 'Roboto', sans-serif;
   .header-{
     &container{
       height: 7vh;
@@ -15,7 +50,14 @@ height: 100vh;
       justify-content: space-between;
       align-items: center;
       padding: 5px;
-      background-color: gray;
+      &.light{
+        @include background-light();
+      }
+      &.dark{
+        @include background-dark();
+        @include button-dark();
+        @include font-dark();
+      }
     }
   }
   .home-{
@@ -25,6 +67,7 @@ height: 100vh;
       justify-content: space-between;
       align-items: center;
       flex-direction: column;
+      background: #FFFFFF;
 
       .search-{
         &container{
@@ -38,11 +81,13 @@ height: 100vh;
       }
       .weather{
         &-container{
+          @include gradient-light();
           flex-grow: 1;
           display: flex;
           flex-direction: column;
           width: 80%;
           border: 1px solid black;
+          border-radius: 5px;
           padding: 0 5%;
           margin-bottom: 5px;
 
@@ -125,17 +170,11 @@ height: 100vh;
 
   .card{
     &-container{
-      border: 1px solid grey;
-      border-radius: 5px;
       display: flex;
       flex-direction: column;
       justify-content: space-evenly;
       align-items: center;
-      width: 10vw;
       height: 60%;
-      -webkit-box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
-      -moz-box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
-      box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
       max-height: 140px;
       
     }
@@ -143,39 +182,29 @@ height: 100vh;
   .clickable {
     cursor: pointer;
   }
+  @media (min-width: $bp-phone){
+    .card-container{
+      width: 10vw;
+      border: 1px solid grey;
+      border-radius: 5px;
+      -webkit-box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
+      -moz-box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
+      box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
+
+    }
+  }
+  @media (max-width: $bp-phone){
+    .card-container{
+      width:15vw;
+    }
+    .card-container:not(:first-child){
+      border-left: 1px solid grey;
+    }
+    .favourite-btn{
+      display: none;
+    }
+    .marquee-icon{
+      width: 50vw !important;
+    }
+  }
 }
-
-// .App-logo {
-//   height: 40vmin;
-//   pointer-events: none;
-// }
-
-// @media (prefers-reduced-motion: no-preference) {
-//   .App-logo {
-//     animation: App-logo-spin infinite 20s linear;
-//   }
-// }
-
-// .App-header {
-//   background-color: #282c34;
-//   min-height: 100vh;
-//   display: flex;
-//   flex-direction: column;
-//   align-items: center;
-//   justify-content: center;
-//   font-size: calc(10px + 2vmin);
-//   color: white;
-// }
-
-// .App-link {
-//   color: #61dafb;
-// }
-
-// @keyframes App-logo-spin {
-//   from {
-//     transform: rotate(0deg);
-//   }
-//   to {
-//     transform: rotate(360deg);
-//   }
-// }
