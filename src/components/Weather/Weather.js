@@ -71,7 +71,6 @@ export default function Weather({ currentLocation , updateCurrentLocation, addFa
         if (favourites.length > 0 && currentLocation.id) {
             const favouriteIndex = favourites.findIndex(item => item.id === currentLocation.id)
             setIsFavourite(favouriteIndex >= 0 ? true : false)
-            debugger
         } else setIsFavourite(false)
     }, [favourites, currentLocation])
 
@@ -95,7 +94,7 @@ export default function Weather({ currentLocation , updateCurrentLocation, addFa
                 <Marquee weatherData={forecasts.length > 0 ? forecasts[0].Day : null} />
             </div>
             <div className="weather-bottom">
-                <SpreadOut cardData={forecasts.length > 0 ? createCardData(forecasts) : null} />
+                <SpreadOut cardData={forecasts.length > 0 ? createCardData(forecasts) : null}  cardAmount={5}/>
             </div>
         </div>
     )

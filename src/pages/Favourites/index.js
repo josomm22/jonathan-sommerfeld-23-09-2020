@@ -5,7 +5,8 @@ import { updateCurrentLocation } from '../../redux/reducers/Preferences'
 
 
 export default connect(state => ({
-    ...state.Favourites
+    ...state.Favourites,
+    theme: state.Preferences.theme
 }), {
     updateCurrentLocation
 }

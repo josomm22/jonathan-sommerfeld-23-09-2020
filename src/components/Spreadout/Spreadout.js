@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import WeatherCard from '../WeatherCard';
 import { range } from 'lodash'
 
-export default function SpreadOut({ cardData, isClickable, onCardClick }) {
+export default function SpreadOut({ cardData, cardAmount, isClickable, onCardClick }) {
 
     return (
         <div className="spreadout">
@@ -18,7 +18,7 @@ export default function SpreadOut({ cardData, isClickable, onCardClick }) {
                         onCardClick={onCardClick}
                     />)
                 :
-                range(4).map(() => <WeatherCard isLoading={true} />)
+                range(cardAmount).map(() => <WeatherCard isLoading={true} />)
             }
         </div>
     )

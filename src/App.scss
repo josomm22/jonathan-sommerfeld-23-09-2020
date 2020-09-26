@@ -67,7 +67,15 @@ font-family: 'Roboto', sans-serif;
       justify-content: space-between;
       align-items: center;
       flex-direction: column;
-      background: #FFFFFF;
+      &.light{
+        @include gradient-light();
+      }
+      &.dark{
+        @include gradient-dark();
+        @include button-dark();
+        @include font-dark();
+      }
+      // background: #FFFFFF;
 
       .search-{
         &container{
@@ -81,7 +89,6 @@ font-family: 'Roboto', sans-serif;
       }
       .weather{
         &-container{
-          @include gradient-light();
           flex-grow: 1;
           display: flex;
           flex-direction: column;
@@ -127,8 +134,7 @@ font-family: 'Roboto', sans-serif;
             position: relative;
 
             &-icon{
-              // font-size: 30px;
-              width: 20vw;
+              width: 17vw;
             }
             &-loader{
               font-size: 50px;
@@ -155,6 +161,13 @@ font-family: 'Roboto', sans-serif;
       display: flex;
       flex-grow: 1;
       padding: 5%;
+      &.light{
+        @include gradient-light();
+      }
+      &.dark{
+        @include gradient-dark();
+        @include font-dark();
+      }
     }
     &-container{
       display: flex;
@@ -176,6 +189,7 @@ font-family: 'Roboto', sans-serif;
       align-items: center;
       height: 60%;
       max-height: 140px;
+      flex-grow: 1;
       
     }
   }
@@ -206,5 +220,12 @@ font-family: 'Roboto', sans-serif;
     .marquee-icon{
       width: 50vw !important;
     }
+  }
+  .light, .dark{
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-property: all;
+    transition-duration: 0.3s;
+    transition-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition-delay: 0s;
   }
 }
