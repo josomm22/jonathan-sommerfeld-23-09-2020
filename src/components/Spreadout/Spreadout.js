@@ -18,7 +18,7 @@ export default function SpreadOut({ cardData, cardAmount, isClickable, onCardCli
                         onCardClick={onCardClick}
                     />)
                 :
-                range(cardAmount).map(() => <WeatherCard isLoading={true} />)
+                range(cardAmount).map((value, index) => <WeatherCard isLoading={true} key={"fav"+index}/>)
             }
         </div>
     )
