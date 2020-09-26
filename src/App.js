@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Route, Redirect, Switch } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Redirect, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux'
 import store from './redux/store'
 import Header from './components/Header';
@@ -15,7 +15,7 @@ function App() {
     <Provider store={store}>
 
       <div className="App">
-        <BrowserRouter >
+        <HashRouter basename="/" >
           <Header />
           <Switch>
             <Route path="/home">
@@ -28,7 +28,7 @@ function App() {
               <Redirect strict to="/home" />
             </Route>
           </Switch>
-        </BrowserRouter>
+        </HashRouter>
       </div>
     </Provider>
   );
