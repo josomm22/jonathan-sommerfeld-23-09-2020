@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React from 'react';
 import WeatherCard from '../WeatherCard';
 import { range } from 'lodash'
 

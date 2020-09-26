@@ -14,12 +14,13 @@ export default function Favourites({ favourites, updateCurrentLocation, theme })
         try {
             Promise.all(favouritesArray.map(async locationObj => {
                 const currentWeather = await getCurrentConditions(locationObj.id)
-                const weatherObj = {
+                let weatherObj = {
                     id: locationObj.id,
                     header: locationObj.name,
                 }
                 if (currentWeather) {
-                    weatherObj = {...weatherObj,
+                    weatherObj = {
+                        ...weatherObj,
                         temperature: currentWeather[0].Temperature.Metric.Value,
                         icon: currentWeather[0].WeatherIcon,
                         text: currentWeather[0].WeatherText,
@@ -41,7 +42,7 @@ export default function Favourites({ favourites, updateCurrentLocation, theme })
         updateCurrentLocation(locationObj)
         history.push('/home')
 
-    }, [history]);
+    }, [history, updateCurrentLocation]);
 
     useEffect(() => {
         if (favourites.length > 0) {

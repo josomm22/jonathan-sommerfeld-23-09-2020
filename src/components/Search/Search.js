@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Input, AutoComplete, message } from 'antd'
+import { Input, AutoComplete } from 'antd'
 import { handleSearch } from '../../API/fetch'
 
 export default function Search({ updateCurrentLocation }) {

@@ -1,14 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Button, Switch } from 'antd';
-import day from '../../assets/icons/day.svg'
-import night from '../../assets/icons/night.svg'
 
 export default function Header({toggleTheme, theme}) {
-
-    const switchIcon = icon => {
-        return <img src={icon}/>
-    }
 
     return (
         <div className={`header-container ${theme}`}>

@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { Button, message } from 'antd';
 import { LoadingOutlined, HeartTwoTone } from '@ant-design/icons';
-import Search from '../../components/Search';
 import { get5DayForecast } from '../../API/fetch';
 import { getDayOfTheWeek } from '../../Helpers/dateHelpers';
 import Marquee from '../Marquee';
@@ -47,7 +46,7 @@ export default function Weather({ currentLocation, updateCurrentLocation, addFav
 
     const handleClick = useCallback(() => {
         handleFavourites(currentLocation.id);
-    });
+    },[currentLocation, handleFavourites]);
 
     const createCardData = array => {
         return array.map(dayForecast => {

@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React from 'react';
 import { LoadingOutlined } from '@ant-design/icons';
 import iconFinder from '../../Helpers/iconFinder';
 
@@ -11,7 +11,7 @@ export default function Marquee({ weatherData }) {
         <div className="marquee">
             {weatherData ?
                 <>
-                    <img className="marquee-icon" src={iconFinder(weatherData.Icon)} />
+                    <img className="marquee-icon" src={iconFinder(weatherData.Icon)} alt={''} />
                     <div className="marquee-text">{weatherData.IconPhrase}</div>
                 </>
                 :
