@@ -20,8 +20,8 @@ export default function Weather({ currentLocation , updateCurrentLocation, addFa
 
     const getWeather = async id => {
         if (id) {
-            const response = testResponse;
-            // const response = await get5DayForecast(id);
+            // const response = testResponse;
+            const response = await get5DayForecast(id);
             console.log("weather", response);
             setForecasts(response.DailyForecasts)
 
