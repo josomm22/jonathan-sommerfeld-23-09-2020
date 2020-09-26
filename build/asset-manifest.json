@@ -1,19 +1,19 @@
 {
   "files": {
     "main.css": "/weather-app-ui/static/css/main.0ab69366.chunk.css",
-    "main.js": "/weather-app-ui/static/js/main.9f0da82f.chunk.js",
-    "main.js.map": "/weather-app-ui/static/js/main.9f0da82f.chunk.js.map",
+    "main.js": "/weather-app-ui/static/js/main.bfc4ab84.chunk.js",
+    "main.js.map": "/weather-app-ui/static/js/main.bfc4ab84.chunk.js.map",
     "runtime-main.js": "/weather-app-ui/static/js/runtime-main.5a6b5752.js",
     "runtime-main.js.map": "/weather-app-ui/static/js/runtime-main.5a6b5752.js.map",
     "static/css/2.1977312c.chunk.css": "/weather-app-ui/static/css/2.1977312c.chunk.css",
-    "static/js/2.83c29655.chunk.js": "/weather-app-ui/static/js/2.83c29655.chunk.js",
-    "static/js/2.83c29655.chunk.js.map": "/weather-app-ui/static/js/2.83c29655.chunk.js.map",
+    "static/js/2.824a5d8c.chunk.js": "/weather-app-ui/static/js/2.824a5d8c.chunk.js",
+    "static/js/2.824a5d8c.chunk.js.map": "/weather-app-ui/static/js/2.824a5d8c.chunk.js.map",
     "index.html": "/weather-app-ui/index.html",
-    "precache-manifest.6cc11e1acc158975b07cc5e95e585db9.js": "/weather-app-ui/precache-manifest.6cc11e1acc158975b07cc5e95e585db9.js",
+    "precache-manifest.8f54be1790e32eb82f5e80cd1a537618.js": "/weather-app-ui/precache-manifest.8f54be1790e32eb82f5e80cd1a537618.js",
     "service-worker.js": "/weather-app-ui/service-worker.js",
     "static/css/2.1977312c.chunk.css.map": "/weather-app-ui/static/css/2.1977312c.chunk.css.map",
     "static/css/main.0ab69366.chunk.css.map": "/weather-app-ui/static/css/main.0ab69366.chunk.css.map",
-    "static/js/2.83c29655.chunk.js.LICENSE.txt": "/weather-app-ui/static/js/2.83c29655.chunk.js.LICENSE.txt",
+    "static/js/2.824a5d8c.chunk.js.LICENSE.txt": "/weather-app-ui/static/js/2.824a5d8c.chunk.js.LICENSE.txt",
     "static/media/cloudy-day-1.svg": "/weather-app-ui/static/media/cloudy-day-1.80a5d865.svg",
     "static/media/cloudy-day-2.svg": "/weather-app-ui/static/media/cloudy-day-2.b931d84d.svg",
     "static/media/cloudy-day-3.svg": "/weather-app-ui/static/media/cloudy-day-3.109368f6.svg",
@@ -45,8 +45,8 @@
   "entrypoints": [
     "static/js/runtime-main.5a6b5752.js",
     "static/css/2.1977312c.chunk.css",
-    "static/js/2.83c29655.chunk.js",
+    "static/js/2.824a5d8c.chunk.js",
     "static/css/main.0ab69366.chunk.css",
-    "static/js/main.9f0da82f.chunk.js"
+    "static/js/main.bfc4ab84.chunk.js"
   ]
 }

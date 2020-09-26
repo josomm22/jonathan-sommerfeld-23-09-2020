@@ -15,7 +15,7 @@ function App() {
     <Provider store={store}>
 
       <div className="App">
-        <HashRouter basename="/" >
+        <HashRouter basename="/weather-app-ui/" >
           <Header />
           <Switch>
             <Route path="/home">
