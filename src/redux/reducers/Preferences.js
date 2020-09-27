@@ -31,7 +31,6 @@ export default function (state = initialState, action) {
         case TOGGLE_THEME: {
             const { theme } = state;
             const newTheme = theme === 'light' ? 'dark' : 'light';
-            console.log("newTheme", newTheme);
 
             return {
                 ...state,

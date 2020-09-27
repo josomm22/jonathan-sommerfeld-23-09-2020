@@ -29,7 +29,7 @@ $bp-phone: 600px;
 }
 @mixin button-dark {  
   .ant-btn{
-    background: darkslateblue !important;
+    background: #2b5060 !important;
     color: #FFFFFF;
   }
 }
@@ -48,8 +48,8 @@ display: flex;
 flex-direction: column;
 height: 100vh;
 font-family: 'Roboto', sans-serif;
-  .header-{
-    &container{
+  .header{
+    &-container{
       height: 7vh;
       display: flex;
       box-sizing: border-box;
@@ -65,9 +65,12 @@ font-family: 'Roboto', sans-serif;
         @include font-dark();
       }
     }
+    &-title{
+      transform: translate(-50%);
+    }
   }
-  .home-{
-    &container{
+  .home{
+    &-container{
       display: flex;
       flex-grow: 1;
       justify-content: space-between;
@@ -83,13 +86,13 @@ font-family: 'Roboto', sans-serif;
       }
       // background: #FFFFFF;
 
-      .search-{
-        &container{
+      .search{
+        &-container{
           height: 60px;
           width: 50vw;
           padding: 10px;
         }
-        &bar{
+        &-bar{
           width: 100%;
         }
       }
