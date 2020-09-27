@@ -65,9 +65,6 @@ font-family: 'Roboto', sans-serif;
         @include font-dark();
       }
     }
-    &-title{
-      transform: translate(-50%);
-    }
   }
   .home{
     &-container{
@@ -220,7 +217,9 @@ font-family: 'Roboto', sans-serif;
       -webkit-box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
       -moz-box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
       box-shadow: 4px 6px 10px -1px rgba(0,0,0,0.13);
-
+    }
+    .header-title {
+      transform: translate(-50%);
     }
   }
   @media (max-width: $bp-phone){
