@@ -9,11 +9,14 @@ const getLocationObj = () => {
         return new Promise((resolve, reject) => {
             navigator.geolocation.getCurrentPosition(
                 position => {
+                    console.log("position enabled");
                     let coordinates = position.coords;
                     const locationResponse = fetchLocation(coordinates)
                     resolve(locationResponse);
                 },
-                error => resolve(defaultLocation),
+                error => {
+                    console.log("position disabled");
+                    resolve(defaultLocation)},
                 { enableHighAccuracy: false, timeout: 20000, maximumAge: 1000 }
             )
         });
