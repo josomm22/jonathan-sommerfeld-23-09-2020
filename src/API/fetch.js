@@ -46,3 +46,16 @@ export async function get5DayForecast(id) {
 
     };
 }
+
+export async function fetchLocation(obj) {
+    const url = "http://dataservice.accuweather.com/locations/v1/cities/geoposition/search"
+    try {
+        const response = await axios.get(`${corsUrl}${url}?apikey=${API_KEY}&q=${obj.latitude+','+obj.longitude}`);
+        return response.data;
+
+    } catch (err) {
+        // console.log("error", err)
+        message.error('Unable to get current location name.')
+
+    };
+};
