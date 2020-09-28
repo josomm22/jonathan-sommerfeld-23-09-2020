@@ -1,13 +1,14 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Button, message } from 'antd';
+import { Button, message, Switch } from 'antd';
 import { LoadingOutlined, HeartTwoTone } from '@ant-design/icons';
 import { get5DayForecast } from '../../API/fetch';
 import { getDayOfTheWeek } from '../../Helpers/dateHelpers';
 import { getCoordinates } from '../../API/geolocation';
 import Marquee from '../Marquee';
 import SpreadOut from '../Spreadout';
+import { cToF } from '../../Helpers/temperature';
 
-export default function Weather({ currentLocation, updateCurrentLocation, addFavourite, removeFavourite, favourites }) {
+export default function Weather({ currentLocation, updateCurrentLocation, addFavourite, removeFavourite, favourites, tempUnit, toggleTemp }) {
     const [forecasts, setForecasts] = useState([]);
     const [isFavourite, setIsFavourite] = useState(false);
 
@@ -79,9 +80,22 @@ export default function Weather({ currentLocation, updateCurrentLocation, addFav
         <div className="weather-container">
             <div className="weather-top">
                 <div className="weather-top-left">
+                    <div className="unit-switch">
+                        Display as: 
+                        <Switch
+                            checkedChildren="C°"
+                            unCheckedChildren="F°"
+                            onChange={toggleTemp}
+                            checked={tempUnit === 'C'}
+                            className="unit-switch-toggler"
+                        />
+                    </div>
                     {currentLocation.name}
                     <br />
-                    {forecasts.length > 0 ? `${forecasts[0].Temperature.Maximum.Value} C°` : <LoadingOutlined />}
+                    {forecasts.length > 0 ?
+                        `${tempUnit === "C" ? forecasts[0].Temperature.Maximum.Value : cToF(forecasts[0].Temperature.Maximum.Value)} ${tempUnit}°` :
+                        <LoadingOutlined />
+                    }
                 </div>
                 <div className="weather-top-right">
                     <HeartTwoTone className="favourite-icon" onClick={handleClick} twoToneColor={isFavourite ? "#eb2f96" : "#D3D3D3"} />

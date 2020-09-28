@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
-import { AutoComplete } from 'antd';
+import { AutoComplete, Button } from 'antd';
+import { CompassTwoTone } from '@ant-design/icons';
 import { handleSearch } from '../../API/fetch';
+import { getCoordinates } from '../../API/geolocation';
+
 
 const { Option } = AutoComplete;
 
@@ -33,8 +36,17 @@ export default function Search({ updateCurrentLocation }) {
 
     };
 
+    const handleLocation = async () => {
+        const location = await getCoordinates();
+        updateCurrentLocation(location)
+    }
+
+
     return (
         <div className="search-container">
+            <Button onClick={() => handleLocation()} className="search-geo">
+                <CompassTwoTone /> Current Location
+            </Button>
             <AutoComplete
                 dropdownClassName="search-dropdown"
                 defaultActiveFirstOption={false}

@@ -88,6 +88,10 @@ font-family: 'Roboto', sans-serif;
           height: 60px;
           width: 50vw;
           padding: 10px;
+          display: flex;
+        }
+        &-geo{
+          margin-right: 5px;
         }
         &-bar{
           width: 100%;
@@ -111,7 +115,14 @@ font-family: 'Roboto', sans-serif;
           align-items: center;
           height: 20%;
           &-left{
-
+            display: flex;
+            flex-direction: column;
+            .unit-switch{
+              display: flex;
+              &-toggler{
+                margin-left: 5px;
+              }
+            }
           }
           &-right{
             display: flex;
@@ -223,6 +234,9 @@ font-family: 'Roboto', sans-serif;
     }
   }
   @media (max-width: $bp-phone){
+    .search-container{
+      width: 100% !important;
+    }
     .card-container{
       width:15vw;
     }
