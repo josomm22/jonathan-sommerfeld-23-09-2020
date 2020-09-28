@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c044b068753e3f34e192682526d976e6",
+    "revision": "b759189633fe9a468ba795bdd5b76eb9",
     "url": "/jonathan-sommerfeld-23-09-2020/index.html"
   },
   {
-    "revision": "d792a342df1f5d586356",
+    "revision": "a7ba485a7cef2a41fa05",
     "url": "/jonathan-sommerfeld-23-09-2020/static/css/2.1977312c.chunk.css"
   },
   {
-    "revision": "7c1ac43d64e91de78986",
-    "url": "/jonathan-sommerfeld-23-09-2020/static/css/main.3c4e5c19.chunk.css"
+    "revision": "2073e5cdc5359d1556f3",
+    "url": "/jonathan-sommerfeld-23-09-2020/static/css/main.5df84c45.chunk.css"
   },
   {
-    "revision": "d792a342df1f5d586356",
-    "url": "/jonathan-sommerfeld-23-09-2020/static/js/2.4132292e.chunk.js"
+    "revision": "a7ba485a7cef2a41fa05",
+    "url": "/jonathan-sommerfeld-23-09-2020/static/js/2.82c639e1.chunk.js"
   },
   {
     "revision": "117d65892edc8adcd29d4a0d57b5a80a",
-    "url": "/jonathan-sommerfeld-23-09-2020/static/js/2.4132292e.chunk.js.LICENSE.txt"
+    "url": "/jonathan-sommerfeld-23-09-2020/static/js/2.82c639e1.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7c1ac43d64e91de78986",
-    "url": "/jonathan-sommerfeld-23-09-2020/static/js/main.c6c2bad4.chunk.js"
+    "revision": "2073e5cdc5359d1556f3",
+    "url": "/jonathan-sommerfeld-23-09-2020/static/js/main.54322f29.chunk.js"
   },
   {
     "revision": "391b20fc9f92367f9bba",

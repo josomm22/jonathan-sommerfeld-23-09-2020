@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/jonathan-sommerfeld-23-09-2020/static/css/main.3c4e5c19.chunk.css",
-    "main.js": "/jonathan-sommerfeld-23-09-2020/static/js/main.c6c2bad4.chunk.js",
-    "main.js.map": "/jonathan-sommerfeld-23-09-2020/static/js/main.c6c2bad4.chunk.js.map",
+    "main.css": "/jonathan-sommerfeld-23-09-2020/static/css/main.5df84c45.chunk.css",
+    "main.js": "/jonathan-sommerfeld-23-09-2020/static/js/main.54322f29.chunk.js",
+    "main.js.map": "/jonathan-sommerfeld-23-09-2020/static/js/main.54322f29.chunk.js.map",
     "runtime-main.js": "/jonathan-sommerfeld-23-09-2020/static/js/runtime-main.51dc5208.js",
     "runtime-main.js.map": "/jonathan-sommerfeld-23-09-2020/static/js/runtime-main.51dc5208.js.map",
     "static/css/2.1977312c.chunk.css": "/jonathan-sommerfeld-23-09-2020/static/css/2.1977312c.chunk.css",
-    "static/js/2.4132292e.chunk.js": "/jonathan-sommerfeld-23-09-2020/static/js/2.4132292e.chunk.js",
-    "static/js/2.4132292e.chunk.js.map": "/jonathan-sommerfeld-23-09-2020/static/js/2.4132292e.chunk.js.map",
+    "static/js/2.82c639e1.chunk.js": "/jonathan-sommerfeld-23-09-2020/static/js/2.82c639e1.chunk.js",
+    "static/js/2.82c639e1.chunk.js.map": "/jonathan-sommerfeld-23-09-2020/static/js/2.82c639e1.chunk.js.map",
     "index.html": "/jonathan-sommerfeld-23-09-2020/index.html",
-    "precache-manifest.fd86c6e6036ae140e3aae7d8c8a102e2.js": "/jonathan-sommerfeld-23-09-2020/precache-manifest.fd86c6e6036ae140e3aae7d8c8a102e2.js",
+    "precache-manifest.4b3a2d798b3837c99420b13103837cc2.js": "/jonathan-sommerfeld-23-09-2020/precache-manifest.4b3a2d798b3837c99420b13103837cc2.js",
     "service-worker.js": "/jonathan-sommerfeld-23-09-2020/service-worker.js",
     "static/css/2.1977312c.chunk.css.map": "/jonathan-sommerfeld-23-09-2020/static/css/2.1977312c.chunk.css.map",
-    "static/css/main.3c4e5c19.chunk.css.map": "/jonathan-sommerfeld-23-09-2020/static/css/main.3c4e5c19.chunk.css.map",
-    "static/js/2.4132292e.chunk.js.LICENSE.txt": "/jonathan-sommerfeld-23-09-2020/static/js/2.4132292e.chunk.js.LICENSE.txt",
+    "static/css/main.5df84c45.chunk.css.map": "/jonathan-sommerfeld-23-09-2020/static/css/main.5df84c45.chunk.css.map",
+    "static/js/2.82c639e1.chunk.js.LICENSE.txt": "/jonathan-sommerfeld-23-09-2020/static/js/2.82c639e1.chunk.js.LICENSE.txt",
     "static/media/cloudy-day-1.svg": "/jonathan-sommerfeld-23-09-2020/static/media/cloudy-day-1.1191a395.svg",
     "static/media/cloudy-day-2.svg": "/jonathan-sommerfeld-23-09-2020/static/media/cloudy-day-2.eb5ccd91.svg",
     "static/media/cloudy-day-3.svg": "/jonathan-sommerfeld-23-09-2020/static/media/cloudy-day-3.9039acf1.svg",
@@ -45,8 +45,8 @@
   "entrypoints": [
     "static/js/runtime-main.51dc5208.js",
     "static/css/2.1977312c.chunk.css",
-    "static/js/2.4132292e.chunk.js",
-    "static/css/main.3c4e5c19.chunk.css",
-    "static/js/main.c6c2bad4.chunk.js"
+    "static/js/2.82c639e1.chunk.js",
+    "static/css/main.5df84c45.chunk.css",
+    "static/js/main.54322f29.chunk.js"
   ]
 }
