@@ -18,3 +18,7 @@ Sass,
 Antd,
 Axios,
 lodash.
+<br />
+<br />
+ui icons by antd,
+weather icons by AmCharts,
