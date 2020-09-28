@@ -1,66 +1,57 @@
-import React, { useState, useEffect } from 'react';
-import { Input, AutoComplete } from 'antd'
-import { handleSearch } from '../../API/fetch'
+import React, { useState } from 'react';
+import { AutoComplete } from 'antd';
+import { handleSearch } from '../../API/fetch';
+
+const { Option } = AutoComplete;
 
 export default function Search({ updateCurrentLocation }) {
-    const [selectedLocationName, setSelectedLocationName] = useState("")
-    // const [selectedLocationID, setSelectedLocationID] = useState("")
+    const [selectedLocationName, setSelectedLocationName] = useState("");
     const [searchResults, setSearchResults] = useState([])
-    const [options, setOptions] = useState([]);
 
     const onChange = value => {
         setSelectedLocationName(value);
     };
 
     const onSearch = async value => {
-
-        const results = await handleSearch(value);
-        console.log("result", results);
-        if (results) {
-            setSearchResults(results)
-        }
-
+        if (value.length > 0) {
+            const results = await handleSearch(value);
+            if (results) {
+                setSearchResults(results);
+            };
+        } else {
+            setSearchResults([]);
+        };
 
 
     };
 
-    const onSelect = value => {
-        console.log("value", value);
-        const locationID = searchResults.find(obj => obj.LocalizedName).Key;
-        setSelectedLocationName(value);
-        const locationObj = {id: locationID, name: value};
+    const onSelect = locationId => {
+        const locationName = searchResults.find(obj => obj.Key === locationId).LocalizedName;
+        setSelectedLocationName(locationName);
+        const locationObj = { id: locationId, name: locationName };
         updateCurrentLocation(locationObj);
 
     };
-
-    const renderOptions = array => {
-        const optionsArray = array.map(obj => {
-            return {
-                value: obj.LocalizedName,
-                label: `${obj.LocalizedName}, ${obj.Country.LocalizedName}`
-            }
-        });
-        return optionsArray
-
-    };
-
-    useEffect(() => {
-        setOptions(renderOptions(searchResults));
-    }, [searchResults])
 
     return (
         <div className="search-container">
             <AutoComplete
                 dropdownClassName="search-dropdown"
+                defaultActiveFirstOption={false}
                 dropdownMatchSelectWidth={500}
                 value={selectedLocationName}
-                options={options}
+                placeholder="search"
                 onSearch={onSearch}
                 onSelect={onSelect}
                 onChange={onChange}
                 className="search-bar"
             >
-                <Input.Search size="large" placeholder="search" />
+                {searchResults.map((obj) =>
+                    <Option key={obj.Key} value={obj.Key}>
+                        {`${obj.LocalizedName}, ${obj.Country.LocalizedName}`}
+                    </Option>
+                )
+                }
             </AutoComplete>
         </div>
 
