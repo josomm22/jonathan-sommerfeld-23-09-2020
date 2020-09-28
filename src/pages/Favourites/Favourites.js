@@ -28,7 +28,6 @@ export default function Favourites({ favourites, updateCurrentLocation, theme })
                 }
                 return weatherObj
             })).then(result => {
-                console.log("test result", result)
                 setWeatherArray(result)
             })
         } catch (err) {
@@ -38,7 +37,6 @@ export default function Favourites({ favourites, updateCurrentLocation, theme })
     };
 
     const onCardClick = useCallback(locationObj => {
-        console.log("test event", locationObj)
         updateCurrentLocation(locationObj)
         history.push('/home')
 
