@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/jonathan-sommerfeld-23-09-2020/precache-manifest.9117d48217018e83fc809e304370077d.js"
+  "/jonathan-sommerfeld-23-09-2020/precache-manifest.25595d3336fc38126c969facb93cd961.js"
 );
 
 self.addEventListener('message', (event) => {
