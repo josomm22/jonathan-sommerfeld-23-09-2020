@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/jonathan-sommerfeld-23-09-2020/static/css/main.3c4e5c19.chunk.css",
-    "main.js": "/jonathan-sommerfeld-23-09-2020/static/js/main.6a04397b.chunk.js",
-    "main.js.map": "/jonathan-sommerfeld-23-09-2020/static/js/main.6a04397b.chunk.js.map",
+    "main.js": "/jonathan-sommerfeld-23-09-2020/static/js/main.c6c2bad4.chunk.js",
+    "main.js.map": "/jonathan-sommerfeld-23-09-2020/static/js/main.c6c2bad4.chunk.js.map",
     "runtime-main.js": "/jonathan-sommerfeld-23-09-2020/static/js/runtime-main.51dc5208.js",
     "runtime-main.js.map": "/jonathan-sommerfeld-23-09-2020/static/js/runtime-main.51dc5208.js.map",
     "static/css/2.1977312c.chunk.css": "/jonathan-sommerfeld-23-09-2020/static/css/2.1977312c.chunk.css",
     "static/js/2.4132292e.chunk.js": "/jonathan-sommerfeld-23-09-2020/static/js/2.4132292e.chunk.js",
     "static/js/2.4132292e.chunk.js.map": "/jonathan-sommerfeld-23-09-2020/static/js/2.4132292e.chunk.js.map",
     "index.html": "/jonathan-sommerfeld-23-09-2020/index.html",
-    "precache-manifest.25595d3336fc38126c969facb93cd961.js": "/jonathan-sommerfeld-23-09-2020/precache-manifest.25595d3336fc38126c969facb93cd961.js",
+    "precache-manifest.fd86c6e6036ae140e3aae7d8c8a102e2.js": "/jonathan-sommerfeld-23-09-2020/precache-manifest.fd86c6e6036ae140e3aae7d8c8a102e2.js",
     "service-worker.js": "/jonathan-sommerfeld-23-09-2020/service-worker.js",
     "static/css/2.1977312c.chunk.css.map": "/jonathan-sommerfeld-23-09-2020/static/css/2.1977312c.chunk.css.map",
     "static/css/main.3c4e5c19.chunk.css.map": "/jonathan-sommerfeld-23-09-2020/static/css/main.3c4e5c19.chunk.css.map",
@@ -47,6 +47,6 @@
     "static/css/2.1977312c.chunk.css",
     "static/js/2.4132292e.chunk.js",
     "static/css/main.3c4e5c19.chunk.css",
-    "static/js/main.6a04397b.chunk.js"
+    "static/js/main.c6c2bad4.chunk.js"
   ]
 }

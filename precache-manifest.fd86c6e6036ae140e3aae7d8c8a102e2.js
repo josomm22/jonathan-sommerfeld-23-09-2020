@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6748f815611b2a8bde5d5af2db363390",
+    "revision": "c044b068753e3f34e192682526d976e6",
     "url": "/jonathan-sommerfeld-23-09-2020/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jonathan-sommerfeld-23-09-2020/static/css/2.1977312c.chunk.css"
   },
   {
-    "revision": "c6a088b846b4351013a5",
+    "revision": "7c1ac43d64e91de78986",
     "url": "/jonathan-sommerfeld-23-09-2020/static/css/main.3c4e5c19.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/jonathan-sommerfeld-23-09-2020/static/js/2.4132292e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "c6a088b846b4351013a5",
-    "url": "/jonathan-sommerfeld-23-09-2020/static/js/main.6a04397b.chunk.js"
+    "revision": "7c1ac43d64e91de78986",
+    "url": "/jonathan-sommerfeld-23-09-2020/static/js/main.c6c2bad4.chunk.js"
   },
   {
     "revision": "391b20fc9f92367f9bba",
