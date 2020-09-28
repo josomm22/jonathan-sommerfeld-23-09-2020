@@ -1,12 +1,11 @@
 import axios from 'axios';
 import {message} from 'antd';
 
-const API_KEY = "QJTrjNGKBK4UREO3d1JIEu4BFRI48Xz1";
+const corsUrl = "https://cors-anywhere.herokuapp.com/";
+// const corsUrl = "";
 
+const API_KEY = "hGztxhUP0p0ytAMPxwrFG2NrUbzpRArb";
 
-// const testValueCurrentWeather = [
-//     {"LocalObservationDateTime":"2020-09-25T16:16:00+03:00","EpochTime":1601039760,"WeatherText":"Clouds and sun","WeatherIcon":4,"HasPrecipitation":false,"PrecipitationType":null,"IsDayTime":true,"Temperature":{"Metric":{"Value":29.4,"Unit":"C","UnitType":17},"Imperial":{"Value":85.0,"Unit":"F","UnitType":18}},"MobileLink":"http://m.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us","Link":"http://www.accuweather.com/en/il/tel-aviv/215854/current-weather/215854?lang=en-us"}
-// ]
 
 export async function handleSearch(value) {
     const url = "https://dataservice.accuweather.com/locations/v1/cities/autocomplete"
