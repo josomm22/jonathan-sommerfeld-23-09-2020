@@ -4,7 +4,7 @@ import {message} from 'antd';
 // const corsUrl = "https://cors-anywhere.herokuapp.com/";
 // const corsUrl = "";
 
-const API_KEY = "hGztxhUP0p0ytAMPxwrFG2NrUbzpRArb";
+const API_KEY = "fqKRY7vAp6lLURLdSrIOBtwsRynCDTyL";
 const baseUrl = "https://dataservice.accuweather.com/"
 
 
