@@ -15,7 +15,7 @@ function App() {
     <Provider store={store}>
 
       <div className="App">
-        <BrowserRouter>
+        <BrowserRouter basename="weather-app-ui">
           <Header />
           <Switch>
             <Route exact path="/">
